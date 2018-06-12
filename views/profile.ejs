@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel='stylesheet' type='text/css' href='/stylesheets/Profile.css' />
+    <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
+</head>
+
+<body>
+
+	
+	<!-- Start Header -->
+	<header>
+		
+			<!-- Logo Part -->
+			 <img src="/images/header2.png" id="headerBg">
+			 <div class="logoArea" id="headerLogoArea">
+				 <img src="/images/logo.png" class="logo" >
+			 </div>
+	
+			<!-- Nav bar Part --> 
+			 <div id="nav">
+				 <ul>
+					 <a href="#"><li>للإعلان عن رقمك</li></a>
+					  <a href="#"><li>المدونة</li></a>
+					 <a href="#"><li>المتجر</li></a>
+					 <a href="intro.html"><li>الرئيسية</li></a>
+				 </ul>
+	
+				 <button><img  id ="btnIcon"src="/images/btn icon.png">للإعلان عن رقمك لدينا</button>
+	
+			 </div>
+	
+		 </header>
+		<!-- End Header -->
+	
+			<!-- Start Right Side bar -->
+			<label id="currentHeading"><span>الرئيسية</span>>البيانات الشخصية</label>
+
+			<aside id="sideList">
+				
+				<ul>
+					<li>البيانات الشخصية</li>
+					<li>تغيير كلمة المرور</li>
+					<li>عربتي</li>
+					<li>لوحات أبوظبي</li>
+					<li>السيارات</li>
+					<li>لوحات أم القيوين</li>
+					<li>لوحات الفجيرة</li>
+					<li>لوحات رأس الخيمة</li>
+					<li>لوحات الشارقة</li>
+				</ul>
+	   
+			</aside>
+		   <!-- End Right Side bar -->
+		
+	<aside id="data">
+		<%
+		for(i in user) {
+			if (i == "Name")
+				continue;
+			if (i=="معلومات شخصية"){%>
+				<h2><%=i%></h2><%
+			continue;}
+				
+			if (user[i]=="")
+			{
+				console.log(i);
+				%>
+				<hr>
+				<h2><%=i%></h2>
+			<%}
+			else
+			{
+				%>
+				<label class="left"><%=user[i]%></label>
+				<label><%=i%></label>
+				<br>
+		  <%
+			}
+		}
+		%>
+		<section id="personalDocumnets">
+					<a href="#">اضغط هنا لإضافة مستندات جديدة</a>
+			</section>
+	
+		 </aside>
+		<!-- End Content -->
+		
+		<!-- Start Footer -->
+		<footer>
+			<img src="/images/footer2.jpg">
+			
+			 <div class="logoArea" id="footerLogoArea">
+				 <img src="/images/logo.png" class="logo">
+				 <label>الحقوق محفوظة<br>&copy; 2018 تميز</label>
+			 </div>
+			
+				<label>تابعنا على</label>
+				<div id="redRect"></div>
+				<ul>
+					<li><i class="fa fa-facebook-square"></i></li>
+					<li><i class="fa fa-twitter"></i></li>
+					<li><i class="fa fa-paper-plane"></i></li>
+				</ul>
+			
+		</footer>
+		<!-- End Footer -->
+		
+	   
+</body>
+
+</html>

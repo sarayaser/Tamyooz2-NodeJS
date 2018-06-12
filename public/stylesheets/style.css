@@ -1,0 +1,20 @@
+*
+{
+  padding: 0px;
+  margin: 0px;
+}
+.inline{
+  display:inline-block;
+  font-size: 25px;
+  text-decoration-line:none;
+}
+.bar{
+  padding-left:200px;
+  padding-right:200px;
+  padding-bottom:50px;
+  padding-top:50px; 
+}
+.barBackGround{
+  background-color:#4b44b7;
+}
+
